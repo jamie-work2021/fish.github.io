@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+
+        body {
+            background-color: #f1e8d8;
+            height: 300vh;
+            max-width: 375px;
+            /* overflow: hidden; */
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav .bar {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.363);
+            border-radius: 10px;
+        }
+
+        nav .col {
+            font-family: 'Dokdo', cursive;
+            /* background-color: rgb(240, 198, 14); */
+            border-radius: 50%;
+            padding: 5px 12px;
+        }
+
+        nav .third-page {
+            background-color: rgb(240, 198, 14);
+        }
+
+        .bar div {
+            padding: 5px 12px;
+        }
+
+        /* .match {
+            display: flex;
+        } */
+
+        .img-con {
+            position: relative;
+            top: 400px;
+            display: flex;
+            width: 150px;
+            height: 200px;
+            transition: .5s;
+        }
+
+        .img-con img {
+            opacity: .9;
+        }
+
+        .img-con .right {
+            position: absolute;
+            top: -1px;
+            left: 200px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: .5s;
+        }
+
+        .img-con .left {
+            position: absolute;
+            top: -10px;
+            left: -50px;
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+            transition: .5s;
+        }
+
+
+
+
+
+        .candle-1 img {
+            width: 100px;
+            height: 80px;
+            top: 100px;
+            object-fit: contain;
+        }
+
+        .c1 {
+            position: absolute;
+            opacity: 0.5;
+            animation-name: bling-3;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .c2 {
+            position: absolute;
+            opacity: .8;
+            animation-name: bling-1;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        .c3 {
+            position: absolute;
+            opacity: .8;
+            animation-name: bling-2;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes bling-1 {
+            10% {
+
+                opacity: 0;
+
+            }
+
+            50% {
+
+                opacity: 0;
+
+            }
+
+            100% {
+
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes bling-2 {
+            10% {
+
+                opacity: 1;
+
+            }
+
+            50% {
+
+                opacity: 0;
+
+            }
+
+            100% {
+
+                opacity: 0;
+            }
+
+        }
+
+        @keyframes bling-3 {
+            10% {
+
+                opacity: 0;
+
+            }
+
+            50% {
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                opacity: 0;
+            }
+
+        }
+
+
+
+        .candle-2 img {
+            width: 100px;
+            height: 100px;
+            top: 80px;
+            object-fit: contain;
+        }
+
+        .t1 {
+            position: absolute;
+            left: 250px;
+            opacity: 1;
+            animation-name: bling-3;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+
+        }
+
+        .t2 {
+            position: absolute;
+            left: 250px;
+            opacity: 1;
+            animation-name: bling-4;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes bling-3 {
+            10% {
+
+                opacity: 1;
+
+            }
+
+            80% {
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                opacity: 0;
+            }
+
+        }
+
+        @keyframes bling-4 {
+            10% {
+
+                opacity: 0;
+
+            }
+
+            80% {
+
+                opacity: 0;
+
+            }
+
+            100% {
+
+                opacity: 1;
+            }
+
+        }
+
+        /* .hbd {
+            width: 250px;
+            height: 100px;
+        } */
+
+        .hbd img {
+            width: 250px;
+            height: 200px;
+            position: absolute;
+            top: 200px;
+            left: 15%;
+        }
+
+        .bd-card-word {
+            margin: 0 auto;
+            ;
+            font-family: 'Noto Serif TC', serif;
+            margin-top: 400px;
+            width: 80%;
+            justify-content: center;
+            line-height: 1.8;
+        }
+
+        .parallax {
+            width: 100%;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .z1 {
+            background-image: url('./imgs/chin4.png');
+            opacity: .9;
+            height: 8rem;
+        }
+
+        .z2 {
+            background-image: url('./imgs/chin4.png');
+            opacity: .9;
+            height: 25rem;
+        }
+
+        .z3 {
+            background-image: url('./imgs/chin4.png');
+            height: 10rem;
+        }
+
+        .chin-photo {
+            background-color: rgb(240, 231, 222);
+            width: 290px;
+            height: 400px;
+            margin: 40px auto;
+            justify-content: center;
+
+        }
+
+        .chin-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid white;
+            padding: 6px;
+
+        }
+
+        #movie {
+            margin-left: -0px;
+            border: 3px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="bar">
+            <div class="col first-page"><a href="./index.html">1</a></div>
+            <div class="col second-page"><a href="./jamie-wish.html">2</a></div>
+            <div class="col third-page"><a href="./chin.html">3</a></div>
+            <div class="col fouth-page"><a href="./joyce.html">4</a></div>
+            <div class="col fifth-page"><a href="./photo.html">5</a></div>
+        </div>
+
+    </nav>
+    <div class="birthday-card">
+        <div class="candle-1">
+            <img src="imgs/SVG/SVG/SVG/c1.svg" class="c1">
+            <img src="imgs/SVG/SVG/SVG/c2.svg" class="c2">
+            <img src="imgs/SVG/SVG/SVG/c3.svg" class="c3">
+        </div>
+        <div class="candle-2">
+            <img src="imgs/SVG/SVG/SVG/t1.svg" class="t1">
+            <img src="imgs/SVG/SVG/SVG/t2.svg" class="t2">
+        </div>
+        <div class="hbd">
+            <img src="./imgs/SVG/SVG/SVG/SVG/hbd-word.svg">
+        </div>
+    </div>
+    <div class="bd-card-word">
+        <section class="chin-word">
+            嘿 my friend and besty .<br>親愛的魚，好久不見。<br><br>
+            這是芹，沒錯很久沒聯絡了我們；很難想像一年前還是鄰居的我們已經各奔東西了。
+            不過這並不是難過的事，而是我們都有了各自的生活要努力了，對嗎？以你對我的了解，相信你知道我是個懶惰社交的人類之一，包括我的摯友⋯但我想很幸運的是，我的愛人們都習慣且理解我的聯絡方式，就是久久聯絡一次^_^
+            我不是每天需要熱線才能維繫感情，但若是碰上了這一類的友人，到最後都會失去聯絡。
+            物以類聚我是相信的，我也深信你會是陪著我的友人之一，至少現在是這樣認為著。
+            你若是在讀著這篇文字，就知道這是我們久久聯繫的那一次了哈哈哈哈；因為今天是個特別的日子，請跟著我一起回憶我們的過去，同時打開你的相簿18年的3/14情人節（原諒我的手機相簿是從2018年開始）；我們和3去了一日遊的苗栗之旅，我稱之為累死人之趕不到火車之氣喘吁吁篇🤣第一次採草莓真的不只開心還很好玩只是那時候真想要開車！我記得草莓香腸我蠻喜歡的，還有許多奇形怪狀的草莓我們都想要！下次或許就可以開車再去一回！
+        </section>
+        <section class="chin-photo">
+            <img class="chin1" src="./imgs/chin1.jpg">
+        </section>
+        <section class="chin-word">
+            這時候我們的邊緣人小團體已經是三人行了^_^
+            接著請找找看19年6/20（中間空白那些我真的不知道我們都在幹嘛，到底是多少聯絡跟拍照啦！）第一次去吃起家雞！這的是膩死我不過還是好吃的；說起好吃就會想到你的美食地圖，不知道你最後bingo 了沒有？
+        </section>
+        <section class="chin-photo">
+            <video id="movie" preload controls loop poster="poster.png" width="300" height="360">
+                <source src="./imgs/chin2.mp4" type="video/mp4" />
+                <source src="Yif-Magic.ogv" type="video/ogg" />
+                <source src="Yif-Magic.webm" type="video/web" />
+                您的瀏覽器不支援HTML 5影片播放標籤<video>格式。
+                    Your browser doesn't support the <video> tag.
+                    </video>
+        </section>
+        <section class="chin-word">
+            沒在相簿中的美食，一起吃過最多次的應該就是學餐了吧，我們兩個不知道多愛吃自助餐⋯省錢嗎？⋯不知道但我覺得真的很好吃欸⋯要不要揪一下去吃⋯
+            水源街跟女宿真的好多回憶尤其是你，大概屬於跟屁蟲等級～除了你去找該死前男友之外，後來我也常常去找我的該死前男友^_^我們真的應該好好一起出去幾次的，被戀愛沖昏頭現在我還是好想當學生！然後應該要多騙幾個男生😄回歸正題！19年的9/11你總是做一些深得我心的事情！我收到了我最想要的烤箱！我真的那時候是超級開心，但如果直接煮飯給我吃我可能更開心哈哈哈在學府路205巷的時候收到你的零食點心都真的很窩心餒～這次我們大將33做了網頁給你，但是務實派的我請求你直接跟我許願！沒錯生日願望，不然我直接什麼都寄過去你家^_^
+        </section>
+        <section class="chin-photo">
+            <img src="./imgs/chin3.jpg">
+        </section>
+        <section class="chin-word">
+            19/10/14去了最開心的露營，也因此跟裴更熟了默默的邊緣人團體+1這段日子在畢業後格外的想念，照片太多了你慢慢看。接著是全班拍畢業照的日子10/17一樣可愛，其實我們班的小女生人都頗好的只不過沒有很好的時機可以更熟，所幸繼續當跟屁蟲了！接著12/10是3的生日去唱了歌，中間其實還有很多事，算是我們大學最活躍的時期⋯課業少加上都失戀？？哈哈哈可能是吧但不得不抱怨你失戀的時候我真的是太過於生氣有點想要斷聯⋯不過都過去了哈哈哈那段日子也是我看到最不一樣的你的時候，活得開心最重要。<br>
+            阿里啊雜其實還有很多可以寫不過我最想讓你看的是20/3/27我們在玩得白痴遊戲，我真的看幾次笑幾次⋯希望你能那樣開心地笑著，認識要五年了小妞，你一直都默默發光著我也默默努力著，即使後來大四的我們那段日子不太常聯絡，畢業後也更少了，在你的動態得知你有時候的低落與難過；開心或滿足，我都看在眼裡，但有時候某些事情必須要自己跨出那個小檻，我也一直在想要突破自己。願你知道與相信我一直都會在不管你什麼時候需要我，我都會在；不管你未來怎麼樣我都慶幸在大學的四年裡有你相伴，也謝謝你一直是我的精神支柱，我也會在你需要我的時候挺你到底^_^。<br>
+            致，我大學四年的摯友，生日快樂。
+            <p style="text-align: right;">by芹</p>
+        </section>
+
+    </div>
+    <div class="parallax z1"></div>
+    <div class="parallax z2"></div>
+    <div class="parallax z3"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $('.col').click(function () {
+            console.log('hi', $(this));
+            $(this).css('background-color', 'rgb(240, 198, 14)').siblings().css('background-color', ' transparent')
+        })
+
+
+        $(window).scroll(function () {
+            console.log('scrollTop', $(this).scrollTop());
+            // console.log('height', $(window).height());
+            // console.log(Math.round($(this).scrollTop() / (totalHeight - sawHeight) * 100));
+
+            // let width = Math.round($(this).scrollTop() / (totalHeight - sawHeight) * 100) + '%';
+            // $('.progressBar').css('width', width);
+
+            // console.log('scollTop', $(this).scrollTop());
+
+            let windowScrollTop = $(this).scrollTop();
+
+            if (windowScrollTop > 0) {
+                $('body').css('background', '#f1e8d8');
+                $('.right').css('left', '140px');
+                // $('.left').css('left', '66px')
+            }
+            else {
+                $('body').css('background', '#f1e8d8');
+            }
+            if (windowScrollTop > 0) {
+                $('body').css('background', '#f1e8d8');
+                // $('.right').css('left', '140px');
+                $('.left').css('left', '66px')
+            }
+            else {
+                $('body').css('background', '#f1e8d8');
+            }
+            // if (windowScrollTop > 170) {
+
+
+            //     $('.hug-mo').css('transform', 'translateX(30px)')
+            //     $('.hug-mo').css('transform', 'translateY(400px)')
+            // }
+            // else {
+            //     $('body').css('background', '#f1e8d8');
+            // }
+
+        })
+    </script>
+    </script>
+
+</body>
+
+</html>

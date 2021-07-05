@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joyce</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+
+        body {
+            background-color: #dddddd;
+            height: 150vh;
+            max-width: 375px;
+
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav .bar {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.363);
+            border-radius: 10px;
+        }
+
+        nav .col {
+            font-family: 'Dokdo', cursive;
+            /* background-color: rgb(240, 198, 14); */
+            border-radius: 50%;
+            padding: 5px 12px;
+        }
+
+        nav .fouth-page {
+            background-color: rgb(240, 198, 14);
+        }
+
+        .bar div {
+            padding: 5px 12px;
+        }
+
+        /* .match {
+            display: flex;
+        } */
+
+        .img-con {
+            position: relative;
+            top: 400px;
+            display: flex;
+            width: 150px;
+            height: 200px;
+            transition: .5s;
+        }
+
+        .img-con img {
+            opacity: .9;
+        }
+
+        .img-con .right {
+            position: absolute;
+            top: -1px;
+            left: 200px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: .5s;
+        }
+
+        .img-con .left {
+            position: absolute;
+            top: -10px;
+            left: -50px;
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+            transition: .5s;
+        }
+
+        .bar-img {
+            left: 8%;
+            width: 300px;
+            height: 200px;
+            top: 400px;
+            position: absolute;
+            z-index: -1;
+            border: 4px dashed rgb(252, 255, 213);
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        .bar-img img {
+            opacity: .9;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+
+        }
+
+
+
+
+        .photo {
+            width: 350px;
+            height: 300px;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .old-photo {
+            position: relative;
+        }
+
+        .polar {
+            width: 350px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .p1 {
+            top: 28px;
+            left: 17px;
+            position: absolute;
+            transform: rotate3d(1, 1, 1,
+                    6deg);
+            width: 95px;
+            height: 95px;
+            object-fit: cover;
+            filter: grayscale(.5);
+            animation-name: delay1;
+            animation-duration: 5s;
+            animation-iteration-count: 5;
+        }
+
+        @keyframes delay1 {
+            10% {
+
+                opacity: 0;
+
+            }
+
+            30% {
+
+                opacity: .5;
+
+            }
+
+            100% {
+
+                opacity: 1;
+            }
+        }
+
+        .p2 {
+            top: 32px;
+            left: 130px;
+            position: absolute;
+            transform: rotate3d(1, 1, 1, -8deg);
+            width: 95px;
+            height: 95px;
+            object-fit: cover;
+            filter: grayscale(.5);
+            animation-name: delay2;
+            animation-duration: 5s;
+            animation-iteration-count: 5;
+        }
+
+        @keyframes delay2 {
+            10% {
+
+                opacity: 0;
+
+            }
+
+            50% {
+
+                opacity: .5;
+
+            }
+
+            100% {
+
+                opacity: 1;
+            }
+        }
+
+        .p3 {
+            top: 32px;
+            left: 242px;
+            position: absolute;
+            transform: rotate3d(1, 1, 1, 10deg);
+            width: 95px;
+            height: 95px;
+            object-fit: cover;
+            filter: grayscale(.5);
+            animation-name: delay3;
+            animation-duration: 5s;
+            animation-iteration-count: 5;
+        }
+
+        @keyframes delay3 {
+            10% {
+
+                opacity: 0;
+
+            }
+
+            70% {
+
+                opacity: .5;
+
+            }
+
+            100% {
+
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+        .list-word {
+            top: 0px;
+            left: 2%;
+            position: relative;
+        }
+
+        .list-word .list-paper {
+            margin: 100px auto;
+            width: 350px;
+            height: 550px;
+            opacity: .6;
+            object-fit: cover;
+        }
+
+        .list-word .word {
+            position: absolute;
+            width: 90%;
+            top: 160px;
+            left: 5%;
+            font-family: 'Noto Serif TC', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="bar">
+            <div class="col first-page"><a href="./index.html">1</a></div>
+            <div class="col second-page"><a href="./jamie-wish.html">2</a></div>
+            <div class="col third-page"><a href="./chin.html">3</a></div>
+            <div class="col fouth-page"><a href="./joyce.html">4</a></div>
+            <div class="col fifth-page"><a href="./photo.html">5</a></div>
+        </div>
+
+    </nav>
+    <div class="birthday-card">
+
+        <div class="photo">
+            <img src="./imgs/SVG/SVG/1x/j-p.png">
+        </div>
+
+        <div class="old-photo">
+            <img class="polar" src="./imgs/SVG/SVG/1x/1x/Polaroid.png">
+            <img class="p1" src="./imgs/joyce1.jpg">
+            <img class="p2" src="./imgs/joyce2.jpg">
+            <img class="p3" src="./imgs/joyce3.jpg">
+        </div>
+
+        <div class="list-word">
+            <img class="list-paper" src="./imgs/SVG/SVG/1x/1x/list.png">
+            <div class="word">
+                時間竟然咻一下又過去了～
+                去年的這時候明明才剛幫你搬完家，和夠夠肉一起幫你慶生，在你的小窩裡面打滾！
+                <br><br>
+                常常懷念以前混在一起的時光ಥ_ಥ
+                想念那間乘載我們無數歡笑淚水和失眠夜晚的小窩，也還記得半夜一起買太空城、一起到處找芋圓、點五行水餃迴轉壽司、一起變肥又吵著要減肥的日子，還有那堆噁心小蟲和滂沱大雨～
+                <br><br>
+                現在再回憶起真的只有快樂的事☺️
+                距離上次見面也快半年了，驚覺怎麼那麼久！
+                希望等疫情趨緩之後可以見到面，然後再約一攤有我的露營哈哈哈⛺️
+                <br><br>
+                也希望你不管在哪裡都能一天比一天更快樂，不要再有煩惱了！
+                祝你23歲生日快樂！天天快樂 健健康康 平平安安🤍
+
+                <p style="text-align: right;">by 裴</p>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script>
+            $('.col').click(function () {
+                console.log('hi', $(this));
+                $(this).css('background-color', 'rgb(240, 198, 14)').siblings().css('background-color', ' transparent')
+            })
+
+
+            $(window).scroll(function () {
+                console.log('scrollTop', $(this).scrollTop());
+                // console.log('height', $(window).height());
+                // console.log(Math.round($(this).scrollTop() / (totalHeight - sawHeight) * 100));
+
+                // let width = Math.round($(this).scrollTop() / (totalHeight - sawHeight) * 100) + '%';
+                // $('.progressBar').css('width', width);
+
+                // console.log('scollTop', $(this).scrollTop());
+
+                let windowScrollTop = $(this).scrollTop();
+
+                if (windowScrollTop > 0) {
+                    $('body').css('background', '#dddd');
+                    $('.right').css('left', '140px');
+                    // $('.left').css('left', '66px')
+                }
+                else {
+                    $('body').css('background', '#dddd');
+                }
+                if (windowScrollTop > 0) {
+                    $('body').css('background', '#dddd');
+                    // $('.right').css('left', '140px');
+                    $('.left').css('left', '66px')
+                }
+                else {
+                    $('body').css('background', '#dddd');
+                }
+                // if (windowScrollTop > 170) {
+
+
+                //     $('.hug-mo').css('transform', 'translateX(30px)')
+                //     $('.hug-mo').css('transform', 'translateY(400px)')
+                // }
+                // else {
+                //     $('body').css('background', '#f1e8d8');
+                // }
+
+            })
+        </script>
+        </script>
+
+</body>
+
+</html>

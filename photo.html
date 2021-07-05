@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memories</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 200;
+            src: url(./imgs/F1B78195-24CE-4071-891B-C5B8D024E367.JPG) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 700;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 900;
+            src: url(https://fonts.gstatic.com/s/sourcesanspro/v14/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+        }
+
+        body {
+            /* background: linear-gradient(135deg, #e2d1c3 0%, #fdfcfb 100%); */
+            /* background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            color: #4f585e;
+            font-family: 'Source Sans Pro', sans-serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        nav .bar {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.363);
+            border-radius: 10px;
+        }
+
+        nav .col {
+            font-family: 'Dokdo', cursive;
+            /* background-color: rgb(240, 198, 14); */
+            border-radius: 50%;
+            padding: 5px 12px;
+        }
+
+        nav .fifth-page {
+            background-color: rgb(240, 198, 14);
+        }
+
+        .bar div {
+            padding: 5px 12px;
+        }
+
+
+        .title p {
+            font-family: 'Homemade Apple', cursive;
+            text-align: center;
+            font-size: 46px;
+        }
+
+        a.btn {
+            background: #2d3950e7;
+            border-radius: 4px;
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+            color: #ffffff;
+            display: inline-block;
+            padding: 6px 30px 8px;
+            position: relative;
+            text-decoration: none;
+            transition: all 0.1s 0s ease-out;
+        }
+
+        .no-touch a.btn:hover {
+            background: #263552;
+            box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+            transform: translateY(-2px);
+            transition: all 0.25s 0s ease-out;
+        }
+
+        .no-touch a.btn:active,
+        a.btn:active {
+            background: rgb(6, 65, 70);
+            box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+            transform: translate3d(0, 1px, 0);
+            transition: all 0.025s 0s ease-out;
+        }
+
+        div.cards {
+            margin: 80px auto;
+            max-width: 960px;
+            text-align: center;
+        }
+
+        div.card {
+            background: #ffffff;
+            display: inline-block;
+            margin: 8px;
+            max-width: 300px;
+            perspective: 1000;
+            position: relative;
+            text-align: left;
+            transition: all 0.3s 0s ease-in;
+            width: 300px;
+            z-index: 1;
+        }
+
+        div.card img {
+            max-width: 300px;
+        }
+
+        div.card .card__image-holder {
+            background: rgba(0, 0, 0, 0.1);
+            height: 0;
+            padding-bottom: 75%;
+
+        }
+
+
+
+        div.card div.card-title {
+            background: #ffffff;
+            padding: 6px 15px 10px;
+            position: relative;
+            z-index: 0;
+        }
+
+        div.card div.card-title a.toggle-info {
+            border-radius: 32px;
+            height: 32px;
+            padding: 0;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            width: 32px;
+        }
+
+        div.card div.card-title a.toggle-info span {
+            background: #ffffff;
+            display: block;
+            height: 2px;
+            position: absolute;
+            top: 16px;
+            transition: all 0.15s 0s ease-out;
+            width: 12px;
+        }
+
+        div.card div.card-title a.toggle-info span.left {
+            right: 14px;
+            transform: rotate(45deg);
+        }
+
+        div.card div.card-title a.toggle-info span.right {
+            left: 14px;
+            transform: rotate(-45deg);
+        }
+
+        div.card div.card-title h2 {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.card div.card-title h2 small {
+            font-family: 'Noto Serif TC', serif;
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        div.card div.card-description {
+            font-family: 'Noto Serif TC', serif;
+            padding: 0 15px 10px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        div.card div.card-actions {
+            box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+            padding: 10px 15px 20px;
+            text-align: center;
+        }
+
+        div.card div.card-flap {
+            background: #d9d9d9;
+            position: absolute;
+            width: 100%;
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+
+        div.card div.flap1 {
+            transition: all 0.3s 0.3s ease-out;
+            z-index: -1;
+        }
+
+        div.card div.flap2 {
+            transition: all 0.3s 0s ease-out;
+            z-index: -2;
+        }
+
+        div.cards.showing div.card {
+            cursor: pointer;
+            opacity: 0.6;
+            transform: scale(0.88);
+        }
+
+        .no-touch div.cards.showing div.card:hover {
+            opacity: 0.94;
+            transform: scale(0.92);
+        }
+
+        div.card.show {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+
+        div.card.show div.card-title a.toggle-info {
+            background: #e6b1b1 !important;
+        }
+
+        div.card.show div.card-title a.toggle-info span {
+            top: 15px;
+        }
+
+        div.card.show div.card-title a.toggle-info span.left {
+            right: 10px;
+        }
+
+        div.card.show div.card-title a.toggle-info span.right {
+            left: 10px;
+        }
+
+        div.card.show div.card-flap {
+            background: #ffffff;
+            transform: rotateX(0deg);
+        }
+
+        div.card.show div.flap1 {
+            transition: all 0.3s 0s ease-out;
+        }
+
+        div.card.show div.flap2 {
+            transition: all 0.3s 0.2s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="bar">
+            <div class="col first-page"><a href="./index.html">1</a></div>
+            <div class="col second-page"><a href="./jamie-wish.html">2</a></div>
+            <div class="col third-page"><a href="./chin.html">3</a></div>
+            <div class="col fouth-page"><a href="./joyce.html">4</a></div>
+            <div class="col fifth-page"><a href="./photo.html">5</a></div>
+        </div>
+
+    </nav>
+    <div class="title">
+        <p>Memory</p>
+    </div>
+    <div class="cards">
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/tamsui.png" alt="wave" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    淡水河
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    在淡水，看淡水河的時光。
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/mountain_night.JPG" alt="beach" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    軍艦岩
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    記得隔天要報告，晚上硬要出門。<br>
+                    不過上山後，一切值得。
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020. 04. 15</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/leg.png" alt="mountain" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    露營DAY
+
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    用廣角，人人都是大長腿！<br>
+                    撩起來，不得了！
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2019. 10. 15</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/tree.png" alt="field" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    宜蘭-樹
+
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    一棵大樹。<br>
+                    小黑蚊有夠多，崩潰！<br>
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020. 05. 05</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/water.png" alt="water" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    渭水之丘
+
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    拍最多照的地方，<br>
+                    記得人來來去去，<br>
+                    後來等不下去<br>
+                    學士服隨便拍XD
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020. 05. 04</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/tailand.png" alt="river" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    MUI MUI
+
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    泰式餐酒館，<br>
+                    梓妤處在失戀沒胃口，<br>
+                    喝醉後與芹的溫馨照
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020. 03. 12</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/sea.png" alt="kite" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    淺水灣
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    風大到不行，<br>
+                    還要裝沒事的我們，
+                    照很多張幾乎都不能看....
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020. 04. 15</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/fish_birthday.png" alt="underwater" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    梓妤生日喬遷趴
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    去年的今天，<br>
+                    一眨眼，<br>
+                    一年就過去了，<br>
+                    雖然今年無法一起，<br>
+                    但心同在。<br>
+
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2020. 07. 05</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__image-holder">
+                <img class="card__image" src="./imgs/F1B78195-24CE-4071-891B-C5B8D024E367.JPG" alt="desert" />
+            </div>
+            <div class="card-title">
+                <a href="#" class="toggle-info btn">
+                    <span class="left"></span>
+                    <span class="right"></span>
+                </a>
+                <h2>
+                    美麗新
+                </h2>
+            </div>
+            <div class="card-flap flap1">
+                <div class="card-description">
+                    跨年那天吃的一心壽喜燒，<br>
+                    好像dress code是裙子？<br>
+                </div>
+                <div class="card-flap flap2">
+                    <div class="card-actions">
+                        <a href="#" class="btn">2019. 12. 31</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            var zindex = 10;
+
+            $("div.card").click(function (e) {
+                e.preventDefault();
+
+                var isShowing = false;
+
+                if ($(this).hasClass("show")) {
+                    isShowing = true
+                }
+
+                if ($("div.cards").hasClass("showing")) {
+                    // a card is already in view
+                    $("div.card.show")
+                        .removeClass("show");
+
+                    if (isShowing) {
+                        // this card was showing - reset the grid
+                        $("div.cards")
+                            .removeClass("showing");
+                    } else {
+                        // this card isn't showing - get in with it
+                        $(this)
+                            .css({ zIndex: zindex })
+                            .addClass("show");
+
+                    }
+
+                    zindex++;
+
+                } else {
+                    // no cards in view
+                    $("div.cards")
+                        .addClass("showing");
+                    $(this)
+                        .css({ zIndex: zindex })
+                        .addClass("show");
+
+                    zindex++;
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>
